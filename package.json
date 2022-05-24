@@ -1,5 +1,5 @@
 {
-  "name": "@ckeditor/ckeditor5-upload-plugin",
+  "name": "@enzomoraes/ckeditor5-upload-plugin",
   "version": "0.0.1",
   "description": "A plugin for file Upload for CKEditor 5.",
   "tags": [
