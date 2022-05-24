@@ -3,14 +3,14 @@ import { ButtonView } from 'ckeditor5/src/ui';
 
 import FileIcon from '../assets/icon.svg';
 
-export default class MyPlugin extends Plugin {
+export default class FileUpload extends Plugin {
 	static get pluginName() {
-		return 'MyPlugin';
+		return 'FileUpload';
 	}
 
 	init() {
 		// Add the "myPlugin" button to feature components.
-		this.editor.ui.componentFactory.add( 'myButton', locale => {
+		this.editor.ui.componentFactory.add( 'fileUpload', locale => {
 			const view = new ButtonView( locale );
 
 			view.set( {
