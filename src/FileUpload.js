@@ -1,7 +1,7 @@
 import { Plugin } from 'ckeditor5/src/core';
 import { ButtonView } from 'ckeditor5/src/ui';
 
-import FileIcon from '../assets/icon.svg';
+import FileIcon from 'primeicons/raw-svg/file.svg';
 
 export default class FileUpload extends Plugin {
 	static get pluginName() {
@@ -39,7 +39,8 @@ export default class FileUpload extends Plugin {
 	createFileInput() {
 		// options.upload is a function. It must return an object with properties linkToFile and name to the file that is being uploaded.
 		const options = this.editor.config.get( 'customFileUpload' );
-		const fileInput = document.createElement( 'input' );
+		// eslint-disable-next-line
+		const fileInput = window.document.createElement( 'input' );
 		fileInput.type = 'file';
 		fileInput.click();
 		fileInput.addEventListener( 'change', e => {
