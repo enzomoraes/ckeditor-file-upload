@@ -1,7 +1,7 @@
 import { Plugin } from 'ckeditor5/src/core';
 import { ButtonView } from 'ckeditor5/src/ui';
 
-import FileIcon from '../assets/icon.svg';
+import FileIcon from 'primeicons/raw-svg/file.svg';
 
 export default class FileUpload extends Plugin {
 	static get pluginName() {
