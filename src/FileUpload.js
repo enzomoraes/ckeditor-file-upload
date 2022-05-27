@@ -43,8 +43,8 @@ export default class FileUpload extends Plugin {
 		fileInput.type = 'file';
 		fileInput.multiple = 'multiple';
 		fileInput.click();
-		fileInput.addEventListener( 'change', async e => {
-			await options.upload( e.target.files );
+		fileInput.addEventListener( 'change', e => {
+			options.upload( e.target.files );
 			// const { name, url } = await options.upload( e.target.files[ 0 ] );
 			// this.writeToEditor( name, url );
 			// this.writeToEditor({ name: 'teste', linkToFile: 'www.google.com' });
