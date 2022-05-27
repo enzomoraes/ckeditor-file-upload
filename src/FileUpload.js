@@ -28,23 +28,25 @@ export default class FileUpload extends Plugin {
 		} );
 	}
 
-	writeToEditor( name, url ) {
-		this.editor.model.change( writer => {
-			const link = writer.createText( name, { linkHref: url } );
-			this.editor.model.insertContent( link );
-		} );
-	}
+	// writeToEditor( name, url ) {
+	// 	this.editor.model.change( writer => {
+	// 		const link = writer.createText( name, { linkHref: url } );
+	// 		this.editor.model.insertContent( link );
+	// 	} );
+	// }
 
 	createFileInput() {
-		// options.upload is a function. It must return an object with properties linkToFile and name to the file that is being uploaded.
+		// options.upload is an async function
 		const options = this.editor.config.get( 'customFileUpload' );
 		// eslint-disable-next-line
 		const fileInput = window.document.createElement( 'input' );
 		fileInput.type = 'file';
+		fileInput.multiple = 'multiple';
 		fileInput.click();
 		fileInput.addEventListener( 'change', async e => {
-			const { name, url } = await options.upload( e.target.files[ 0 ] );
-			this.writeToEditor( name, url );
+			await options.upload( e.target.files );
+			// const { name, url } = await options.upload( e.target.files[ 0 ] );
+			// this.writeToEditor( name, url );
 			// this.writeToEditor({ name: 'teste', linkToFile: 'www.google.com' });
 		} );
 	}
