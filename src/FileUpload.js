@@ -42,12 +42,11 @@ export default class FileUpload extends Plugin {
 		const fileInput = window.document.createElement( 'input' );
 		fileInput.type = 'file';
 		fileInput.multiple = 'multiple';
+		// options.accept must be a string with values separated by commas
+		fileInput.accept = options.accept ? options.accept : 'application/pdf';
 		fileInput.click();
 		fileInput.addEventListener( 'change', e => {
 			options.upload( e.target.files );
-			// const { name, url } = await options.upload( e.target.files[ 0 ] );
-			// this.writeToEditor( name, url );
-			// this.writeToEditor({ name: 'teste', linkToFile: 'www.google.com' });
 		} );
 	}
 }

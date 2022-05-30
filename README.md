@@ -7,4 +7,6 @@ This package was created by the [ckeditor5-package-generator](https://www.npmjs.
 
 To use it, just add to your build in config.builtinPlugins options after importing it
 
-Add to your upload method in options.customFileUpload.upload
+Add your upload method in options.customFileUpload.upload
+
+Your options.accept must be a string with values separated by commas.
