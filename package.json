@@ -1,6 +1,6 @@
 {
   "name": "@enzomoraes/ckeditor5-file-upload",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A plugin for file Upload other than just images for CKEditor 5.",
   "tags": [
     "fileupload",
