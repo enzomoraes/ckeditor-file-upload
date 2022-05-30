@@ -1,4 +1,4 @@
-@enzomoraes/ckeditor5-upload-plugin
+@enzomoraes/ckeditor5-file-upload
 =================================
 
 This package was created by the [ckeditor5-package-generator](https://www.npmjs.com/package/ckeditor5-package-generator) package.
